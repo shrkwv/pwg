@@ -1,0 +1,26 @@
+# regular patterns
+|names|
+|names[1:3]|
+|hobbies.hobby_A|
+|hobbies.hobby_A[:5]|
+|hobbies|
+|"test"|
+|r"[abc]{1,3}"|
+# simple functions
+|upper(hobbies)|
+|lower(r"[ABC]{2}")|
+|scramble("john")|
+|title(names)|
+|leet(names)|
+|strip(names)|
+|initials(names)|
+|reverse(phones)|
+# special functions
+|replace(names, " ", ".")|
+|add(names, "test", 4)|
+|split(address, " ",1:3)|
+# complex functions
+#scramble inside lower or upper title or capiotalize not good!!!!!
+|upper(leet(names))|
+|capitalize(split(names, " ", 1))|
+|upper(reverse(leet(names)))|
