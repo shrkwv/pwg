@@ -26,8 +26,8 @@ def argparser():
     """
     parser = argparse.ArgumentParser(description="customized and personalized dictionary maker")
     # mandatory
-    parser.add_argument("pattern", type=str, help="Patterns file - *.pgenny")
-    parser.add_argument("profile", type=str, help="Profile file - *.genny")
+    parser.add_argument("pattern", type=str, help="Patterns file - *.pgeney")
+    parser.add_argument("profile", type=str, help="Profile file - *.geney")
 
     # optional
     parser.add_argument("--size", type=str, nargs='+', help="Define size of word in wordlist ( a:b )")
@@ -67,13 +67,13 @@ def main():
     # if debug:
     #     logging.basicConfig(level=logging.DEBUG)
 
-    # check for genny file
-    if not pattern_file.endswith(".pgenny"):
-        sys.stderr.write("Error: Pattern file must be *.pgenny\n")
+    # check for geney file
+    if not pattern_file.endswith(".pgeney"):
+        sys.stderr.write("Error: Pattern file must be *.pgeney\n")
         parser.print_help(sys.stderr)
         exit(1)
-    if not profile_file.endswith(".genny"):
-        sys.stderr.write("Error: Profile file must be *.genny\n")
+    if not profile_file.endswith(".geney"):
+        sys.stderr.write("Error: Profile file must be *.geney\n")
         parser.print_help(sys.stderr)
         exit(1)
     try:
@@ -105,15 +105,15 @@ def main():
     profile = Profile(profile_as_json)
     counter = 0
     word_limit_counter = 0
-    # sys.stderr.write("Genny start to generate a dictionary based on patterns: %s and profile: %s\n\n" %(pattern_file,profile_file))
+    # sys.stderr.write("geney start to generate a dictionary based on patterns: %s and profile: %s\n\n" %(pattern_file,profile_file))
     errors = []
     warnings = []
     printed_words = []
     for index, pattern_as_string in enumerate(patterns):
         pattern = Pattern(pattern_as_string)
-        genny = Generator(pattern, profile)
+        geney = Generator(pattern, profile)
 
-        words_for_pattern, warning, error = genny.please_generate()
+        words_for_pattern, warning, error = geney.please_generate()
         if error:
             token, error_msg = error
             errors.append((index+1,pattern_as_string, token.token_as_string, error_msg))
