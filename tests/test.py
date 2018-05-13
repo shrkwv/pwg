@@ -84,8 +84,8 @@ class TestUtils(unittest.TestCase):
 
 # class TestProfile(unittest.TestCase):
 #     def setUp(self):
-#         profile_file = "tests/target.geney"
-#         pattern_file = "tests/patterns.pgeney"
+#         profile_file = "tests/default_profile.geney"
+#         pattern_file = "tests/default_patterns.pgeney"
 #         with open(profile_file, 'r') as f:
 #             profile_as_json = json.load(f)
 #

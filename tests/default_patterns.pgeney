@@ -2,7 +2,7 @@
 |names|
 |names[1:3]|
 |hobbies.hobby_A|
-|hobbies.hobby_A[:5]|
+|hobbies.hobby_A[:7]|
 |hobbies|
 |"test"|
 |r"[abc]{1,3}"|
