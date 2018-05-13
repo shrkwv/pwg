@@ -1,13 +1,9 @@
 #!/usr/bin/env python
 from __future__ import unicode_literals
 
-import operator
-from Profile import Profile
-from Pattern import Pattern
 import Utils
 from Token import Token
 import exrex
-import re
 
 
 class Generator:
@@ -104,7 +100,7 @@ class Generator:
                     cur_function, args = function_and_args.pop()
 
                     if cur_function in Token.special_functions:
-                        simple_contents = Utils.special_manipulate_list(cur_function,simple_contents, args)
+                        simple_contents = Utils.special_manipulate_list(cur_function, simple_contents, args)
                     else:
                         simple_contents = Utils.manipulate_list(cur_function, simple_contents)
                 token_results = simple_contents
@@ -118,7 +114,7 @@ class Generator:
 
                     if cur_function in Token.special_functions:
 
-                        simple_chars_contents = Utils.special_manipulate_list(cur_function,simple_chars_contents, args)
+                        simple_chars_contents = Utils.special_manipulate_list(cur_function, simple_chars_contents, args)
                     else:
                         simple_chars_contents = Utils.manipulate_list(cur_function, simple_chars_contents)
                 token_results = simple_chars_contents
@@ -132,7 +128,7 @@ class Generator:
 
                     if cur_function in Token.special_functions:
 
-                        specified_contents = Utils.special_manipulate_list(cur_function,specified_contents, args)
+                        specified_contents = Utils.special_manipulate_list(cur_function, specified_contents, args)
                     else:
 
                         specified_contents = Utils.manipulate_list(cur_function, specified_contents)
@@ -148,7 +144,7 @@ class Generator:
 
                     if cur_function in Token.special_functions:
 
-                        specified_chars_contents = Utils.special_manipulate_list(cur_function,specified_chars_contents, args)
+                        specified_chars_contents = Utils.special_manipulate_list(cur_function, specified_chars_contents, args)
                     else:
 
                         specified_chars_contents = Utils.manipulate_list(cur_function, specified_chars_contents)
@@ -162,7 +158,7 @@ class Generator:
 
                     if cur_function in Token.special_functions:
 
-                        simple_string_as_list = Utils.special_manipulate_list(cur_function,simple_string_as_list, args)
+                        simple_string_as_list = Utils.special_manipulate_list(cur_function, simple_string_as_list, args)
                     else:
 
                         simple_string_as_list = Utils.manipulate_list(cur_function, simple_string_as_list)
@@ -177,7 +173,7 @@ class Generator:
 
                     if cur_function in Token.special_functions:
 
-                        regex_contents = Utils.special_manipulate_list(cur_function,regex_contents, args)
+                        regex_contents = Utils.special_manipulate_list(cur_function, regex_contents, args)
                     else:
                         regex_contents = Utils.manipulate_list(cur_function, regex_contents)
 

@@ -2,15 +2,13 @@
 from __future__ import unicode_literals
 
 
-from Pattern import Pattern
-from Generator import Generator
-from Profile import Profile
-import Utils
+from core.Pattern import Pattern
+from core.Generator import Generator
+from core.Profile import Profile
+from core import Utils
 import argparse
 import itertools
-import logging
 import json
-import os
 import sys
 
 
