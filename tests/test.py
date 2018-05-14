@@ -84,8 +84,8 @@ class TestUtils(unittest.TestCase):
 
 # class TestProfile(unittest.TestCase):
 #     def setUp(self):
-#         profile_file = "tests/default_profile.geney"
-#         pattern_file = "tests/default_patterns.pgeney"
+#         profile_file = "tests/test_profile.geney"
+#         pattern_file = "tests/test_patterns.pgeney"
 #         with open(profile_file, 'r') as f:
 #             profile_as_json = json.load(f)
 #
@@ -160,9 +160,9 @@ class testTokenType(unittest.TestCase):
 
 class testGetValues(unittest.TestCase):
     def setUp(self):
-        # profile_file = "tests/default_profile.geney"
-        # pattern_file = "tests/default_patterns.pgeney"
-        # result_file = "tests/default_result.dic"
+        # profile_file = "tests/test_profile.geney"
+        # pattern_file = "tests/test_patterns.pgeney"
+        # result_file = "tests/test_result.dic"
         #
         # with open(profile_file, 'r') as f:
         #     profile_as_json = json.load(f)
@@ -419,9 +419,9 @@ class testGetValues(unittest.TestCase):
 
 class testGenerate(unittest.TestCase):
     def setUp(self):
-        # profile_file = "tests/default_profile.geney"
-        # pattern_file = "tests/default_patterns.pgeney"
-        # result_file = "tests/default_result.dic"
+        # profile_file = "tests/test_profile.geney"
+        # pattern_file = "tests/test_patterns.pgeney"
+        # result_file = "tests/test_result.dic"
         #
         # with open(profile_file, 'r') as f:
         #     profile_as_json = json.load(f)
