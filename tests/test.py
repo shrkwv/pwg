@@ -84,8 +84,8 @@ class TestUtils(unittest.TestCase):
 
 # class TestProfile(unittest.TestCase):
 #     def setUp(self):
-#         profile_file = "tests/test_profile.geney"
-#         pattern_file = "tests/test_patterns.pgeney"
+#         profile_file = "tests/test_profile.pwg"
+#         pattern_file = "tests/test_patterns.ppwg"
 #         with open(profile_file, 'r') as f:
 #             profile_as_json = json.load(f)
 #
@@ -105,7 +105,7 @@ class TestUtils(unittest.TestCase):
 #     def test_get_values_for_category(self):
 #         for pattern_as_string in self.patterns:
 #             pattern = Pattern(pattern_as_string)
-#             geney = Generator(pattern, self.profile)
+#             pwg = Generator(pattern, self.profile)
 
 class testTokenType(unittest.TestCase):
     def test_token_type_for_simple_token(self):
@@ -160,8 +160,8 @@ class testTokenType(unittest.TestCase):
 
 class testGetValues(unittest.TestCase):
     def setUp(self):
-        # profile_file = "tests/test_profile.geney"
-        # pattern_file = "tests/test_patterns.pgeney"
+        # profile_file = "tests/test_profile.pwg"
+        # pattern_file = "tests/test_patterns.ppwg"
         # result_file = "tests/test_result.dic"
         #
         # with open(profile_file, 'r') as f:
@@ -419,8 +419,8 @@ class testGetValues(unittest.TestCase):
 
 class testGenerate(unittest.TestCase):
     def setUp(self):
-        # profile_file = "tests/test_profile.geney"
-        # pattern_file = "tests/test_patterns.pgeney"
+        # profile_file = "tests/test_profile.pwg"
+        # pattern_file = "tests/test_patterns.ppwg"
         # result_file = "tests/test_result.dic"
         #
         # with open(profile_file, 'r') as f:
@@ -489,8 +489,8 @@ class testGenerate(unittest.TestCase):
         result = []
         for pattern in self.patterns:
             pattern = Pattern(pattern)
-            geney = Generator(pattern, self.profile)
-            words_for_pattern = geney.please_generate()
+            pwg = Generator(pattern, self.profile)
+            words_for_pattern = pwg.please_generate()
             words_for_pattern_product = list(itertools.product(*words_for_pattern))
             words_for_pattern_strings = [''.join(tup) for tup in words_for_pattern_product]
             result += words_for_pattern_strings
